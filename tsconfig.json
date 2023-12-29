@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+		"outDir":                  ".",
+        "target":                  "esnext",
+        "module":                  "nodenext",
+        "moduleResolution":        "nodenext",
+        "useDefineForClassFields": false,
+        "composite":               false,
+        "strict":                  true,
+        "resolveJsonModule":       false,
+        "isolatedModules":         true,
+        "esModuleInterop":         true,
+        "lib":                     [ "ES2022" ],
+        "skipLibCheck":            true,
+        "noEmit":                  false,
+        "types":                   [],
+        "rootDir":                 "."
+    },
+	"exclude": [],
+	"include": [
+		"./*.ts",
+		"./*.mts",
+		"./package.json"
+    ]
+}

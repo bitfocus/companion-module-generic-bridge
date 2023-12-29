@@ -1,15 +1,7 @@
 
-<img src="https://raw.githubusercontent.com/rse/companion-module-generic-bridge/master/icon.svg" width="200" align="right" alt=""/>
+## Generic Bridge
 
-Companion-Module-Generic-Bridge
-===============================
-
-**Generic Bridge for Reflecting States in Bitfocus Companion**
-
-About
------
-
-This exposes a Bridge service for reflecting [Bitfocus Companion](https://bitfocus.io/companion) states.
+This exposes a Bridge service for reflecting Companion states.
 It can be used to bridge between two Companion instances (client/server) or
 between a Companion instance (server) and a custom application.
 It provides either a WebSocket server (listening) or WebSocket client (connecting)
@@ -39,10 +31,4 @@ Its four building blocks are:
 - **Companion Feedback: Receive Bridge State**:
   Establish this under "Buttons > Edit Button > Feedbacks" by
   configuring the "Receive Bridge State" feedbacks.
-
-Copyright & License
--------------------
-
-Copyright &copy; 2023 [Dr. Ralf S. Engelschall](mailto:rse@engelschall.com)<br/>
-Licensed under [MIT](https://spdx.org/licenses/MIT)
 

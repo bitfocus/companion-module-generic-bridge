@@ -1,0 +1,30 @@
+##
+##  Generic Bridge for Reflecting States in Bitfocus Companion
+##  Copyright (c) 2023 Dr. Ralf S. Engelschall <rse@engelschall.com>
+##  Licensed under MIT <https://spdx.org/licenses/MIT>
+##
+
+scripts:
+    #   multiview-style development dashboard
+    dev: >
+                            stmux -w always -m beep -e dummy --
+                            [ -s 40% "npm start lint-watch"
+                            : -s 20% "npm start build-watch" ]
+
+    #   static code analysis (linting)
+    lint-watch:             nodemon --exec "npm start lint" --watch . --ext mts
+    lint:                   npm start lint-eslint lint-tsc
+    lint-eslint:            eslint --config eslint.yaml --ext mts *.mts
+    lint-tsc:               tsc --project tsconfig.json --noEmit
+
+    #   code compilation/transpiling (building)
+    build-watch:            tsc --project tsconfig.json --watch
+    build:                  tsc --project tsconfig.json
+
+    #   test-drive
+    test:                   wscat --connect ws://127.0.0.1:7766
+
+    #   cleanup filesystem
+    clean:                  rimraf main.js
+    clean-dist:             rimraf main.js node_modules
+
