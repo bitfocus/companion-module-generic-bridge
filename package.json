@@ -1,6 +1,6 @@
 {
 	"name":                                 "generic-bridge",
-	"version":                              "0.0.0",
+	"version":                              "0.9.0",
 	"license":                              "MIT",
 	"description":                          "Generic Bridge for Reflecting States in Bitfocus Companion",
 	"repository":                           { "type": "git", "url": "git+https://github.com/rse/companion-module-generic-bridge.git" },
