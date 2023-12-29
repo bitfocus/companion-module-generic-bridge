@@ -40,6 +40,17 @@ Its four building blocks are:
   Establish this under "Buttons > Edit Button > Feedbacks" by
   configuring the "Receive Bridge State" feedbacks.
 
+Its two main use-cases are:
+
+- Bridging state between two Companion instances in case
+  Companion Satellite or simple remote key-presses via OSC cannot be used.
+  This is usually the case when buttons have state you also need
+  local buttons.
+
+- Bridging state between a Companion instance and a custom application
+  in case the custom application does not provide a WebSocket endpoint
+  itself and hence the *Generic Websocket* module cannot be used.
+
 Copyright & License
 -------------------
 
