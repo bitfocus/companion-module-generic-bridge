@@ -1,7 +1,7 @@
 
-<img src="https://raw.githubusercontent.com/rse/companion-module-generic-bridge/master/logo.svg" width="300" align="right" alt=""/>
+<img src="https://raw.githubusercontent.com/rse/companion-module-generic-bridge/master/logo.svg" width="400" align="right" alt=""/>
 
-Companion-Module-Generic-Bridge
+Companion Module Generic Bridge
 ===============================
 
 **Generic Bridge for Reflecting States in Bitfocus Companion**
