@@ -1,5 +1,5 @@
 
-<img src="https://raw.githubusercontent.com/rse/companion-module-generic-bridge/master/logo.svg" width="200" align="right" alt=""/>
+<img src="https://raw.githubusercontent.com/rse/companion-module-generic-bridge/master/logo.svg" width="300" align="right" alt=""/>
 
 Companion-Module-Generic-Bridge
 ===============================
