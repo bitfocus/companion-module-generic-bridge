@@ -8,7 +8,7 @@
 	"main":                                 "main.mjs",
 	"dependencies": {
 		"@companion-module/base":           "1.6.0",
-		"ws":                               "8.16.0",
+		"ws":                               "8.17.1",
         "reconnecting":                     "4.4.1",
         "object-path":                      "0.11.8"
 	},
