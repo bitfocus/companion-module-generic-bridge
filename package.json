@@ -13,7 +13,7 @@
         "object-path":                      "0.11.8"
 	},
 	"devDependencies": {
-		"@companion-module/tools":          "1.4.2",
+		"@companion-module/tools": "^1.5.2",
         "eslint":                           "8.56.0",
         "eslint-config-standard":           "17.1.0",
         "eslint-plugin-import":             "2.29.1",
