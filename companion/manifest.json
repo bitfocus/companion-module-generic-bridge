@@ -13,7 +13,7 @@
 	"products":       [ "Bridge" ],
 	"keywords":       [ "Generic", "Bridge", "WebSocket", "Client", "Server", "State", "Transmit" ],
 	"runtime": {
-		"type":       "node18",
+		"type":       "node26",
 		"api":        "nodejs-ipc",
 		"apiVersion": "0.0.0",
 		"entrypoint": "../main.mjs"
