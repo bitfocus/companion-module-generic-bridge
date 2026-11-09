@@ -10,13 +10,13 @@
 	"type": "module",
 	"main": "main.mjs",
 	"dependencies": {
-		"@companion-module/base": "1.6.0",
+		"@companion-module/base": "1.15.1",
 		"ws": "8.21.0",
 		"reconnecting": "4.4.1",
 		"object-path": "0.11.8"
 	},
 	"devDependencies": {
-		"@companion-module/tools": "^2.8.0",
+		"@companion-module/tools": "^2.9.1",
 		"eslint": "8.56.0",
 		"eslint-config-standard": "17.1.0",
 		"eslint-plugin-import": "2.29.1",
@@ -32,5 +32,8 @@
 	},
 	"scripts": {
 		"start": "nps -c nps.yaml"
+	},
+	"resolutions": {
+		"nan": "2.30.0"
 	}
 }
