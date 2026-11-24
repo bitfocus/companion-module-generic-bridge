@@ -386,7 +386,13 @@ class Module extends CompanionModule.InstanceBase {
                         this.log("info", `[Bridge]: feedback: unsubscribe: JSON state: key: "${key}", def: "${def}", name: "${name}"`);
                     this.feedbacks.delete(id);
                 },
-                callback: () => {
+                callback: (feedback) => {
+                    this.feedbackSyncOptions(feedback.id, {
+                        type: "json",
+                        key: feedback.options.key,
+                        def: feedback.options.def,
+                        name: feedback.options.name
+                    });
                     return {};
                 }
             },
@@ -431,11 +437,25 @@ class Module extends CompanionModule.InstanceBase {
                         this.log("info", `[Bridge]: feedback: unsubscribe: RAW state: regex: "${regex}", def: "${def}", name: "${name}"`);
                     this.feedbacks.delete(id);
                 },
-                callback: () => {
+                callback: (feedback) => {
+                    this.feedbackSyncOptions(feedback.id, {
+                        type: "raw",
+                        regex: feedback.options.regex,
+                        def: feedback.options.def,
+                        name: feedback.options.name
+                    });
                     return {};
                 }
             }
         });
+    }
+    /*  SDK 1.15 evaluates changed options without resubscribing existing feedbacks.  */
+    feedbackSyncOptions(id, next) {
+        const current = this.feedbacks.get(id);
+        if (current && Object.keys(next).some((key) => current[key] !== next[key])) {
+            this.feedbacks.set(id, next);
+            this.feedbackUpdateVariables(id);
+        }
     }
     /*  helper function for updating own Companion variables  */
     async feedbackUpdateVariables(callerId = null) {
